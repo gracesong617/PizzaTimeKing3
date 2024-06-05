@@ -1,0 +1,490 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+canvas {
+  display: block;
+}
+
+#canvas-container {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
+#main-canvas {
+  display: block;
+}
+
+.page1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 1600px;
+  height: 800px;
+  /* height: 100vh; */
+
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.hidden {
+  display: none !important;
+  /* visibility: ; */
+  /* visibility: hidden; */
+}
+
+.pagecolorchange {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+#startbutton {
+  border-radius: 10px;
+  background-color: #faf9f0;
+  color: rgb(209, 147, 180);
+  border-color: rgb(209, 147, 180);
+  animation: moveDownUp 2s infinite, scaleAnimation 2s infinite;
+  position: absolute;
+  justify-content: center;
+  z-index: 5;
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 40px;
+  top: 80%;
+  text-shadow:
+
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+
+}
+
+#title {
+  position: absolute;
+  animation: moveUpDown 2s infinite;
+  top: 23%;
+  margin-top: 0%;
+  margin-left: 15px;
+}
+
+#startbutton:hover {
+  background-color: rgb(209, 147, 180);
+  /* 设置悬停时按钮的背景颜色 */
+  color: #faf9f0;
+}
+
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(20px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes moveDownUp {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes scaleAnimation {
+  0% {
+    transform: scale(1)
+  }
+
+  50% {
+    transform: scale(0.9)
+  }
+
+  to {
+    transform: scale(1)
+  }
+}
+
+#phone {
+  position: absolute;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  z-index: -1;
+  animation: moveUpDown 2s infinite;
+}
+
+#cover {
+  position: absolute;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  left: 10%;
+  display: block;
+  top: 40%;
+  animation: moveUpDown 2s infinite, scaleAnimation 2s infinite;
+}
+
+#cover1 {
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  display: block;
+  z-index: 1;
+  right: 10%;
+  top: 40%;
+  animation: moveUpDown 2s infinite, scaleAnimation 2s infinite;
+
+
+}
+
+#back {
+  display: block;
+  position: fixed;
+  z-index: -5;
+  align-items: center;
+  width: 1600px;
+  height: 800px;
+}
+
+#pizza {
+
+  display: block;
+  z-index: 2;
+  align-items: center;
+  animation: moveUpDown 2s infinite;
+
+  margin-top: 40px;
+  margin-left: 0px;
+}
+
+#canvas-container1 {
+  position: absolute;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  animation: moveUpDown 2s infinite;
+  top: 54%;
+
+}
+
+
+
+#canvas-container {
+  position: absolute;
+  left: 4%;
+  top: 5%;
+  z-index: 1;
+
+}
+
+
+#normal {
+
+  z-index: 1;
+margin-right: 15px;
+
+  top: 52%;
+  animation: moveUpDown 2s infinite;
+}
+
+#eat {
+
+  z-index: 1;
+margin-right: 10px;
+  top: 52%;
+  animation: moveUpDown 2s infinite;
+}
+
+#hint2{
+display: flex;
+align-items: center;
+  flex-direction: row;
+  
+ 
+}
+
+#pink {
+  position: absolute;
+  z-index: 1;
+
+  margin-top: 2%;
+  margin-left: 3%;
+
+}
+
+#pink2 {
+  position: absolute;
+  z-index: 1;
+  margin-top: 70%;
+  margin-left: 3%;
+
+}
+
+#arrow {
+
+  z-index: 1;
+  margin-right: 15px;
+
+  animation: moveUpDown 2s infinite;
+}
+
+
+#score {
+  border-radius: 10px;
+  background-color: #faf9f0;
+  border-color: rgb(209, 147, 180);
+  padding: 6px;
+  border: solid 2px;
+  position: absolute;
+  z-index: 1;
+  margin-top: 32%;
+
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 35px;
+  color: rgb(209, 147, 180);
+  ;
+  text-shadow:
+
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+
+}
+
+#hint {
+  border-radius: 10px;
+  padding: 14px 0px 18px 30px;
+  background-color: #faf9f0;
+  border-color: rgb(209, 147, 180);
+  border: solid 2px;
+  position: flex;
+  z-index: 1;
+  width: 311px;
+
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 28px;
+  line-height: 1.5;
+  color: rgb(209, 147, 180);
+  text-shadow:
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+
+#backbutton {
+  border-radius: 10px;
+  background-color: #faf9f0;
+  color: rgb(209, 147, 180);
+  border-color: rgb(209, 147, 180);
+  animation: moveDownUp 2s infinite, scaleAnimation 2s infinite;
+  position: absolute;
+  justify-content: center;
+  z-index: 5;
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 40px;
+margin-top: 45%;
+  text-shadow:
+
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+
+}
+
+#backbutton:hover {
+  background-color: rgb(209, 147, 180);
+  /* 设置悬停时按钮的背景颜色 */
+  color: #faf9f0;
+}
+
+#happy {
+  position: absolute;
+  z-index: 1;
+  left: 36%;
+  top: 20%;
+  animation: moveLeftRight 3s infinite;
+}
+
+@keyframes moveLeftRight {
+  0% {
+    transform: translateX(0);
+  }
+
+  65% {
+    transform: translateX(400px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+#bye {
+  /* border-radius: 10px; */
+  /* background-color: #faf9f0; */
+  color: rgb(209, 147, 180);
+  /* border: solid 2px; */
+  padding: 5px;
+  border-color: rgb(209, 147, 180);
+  /* animation: moveDownUp 2s infinite, scaleAnimation 2s infinite; */
+  position: absolute;
+  justify-content: center;
+  z-index: 5;
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 61px;
+  top: 4%;
+  left: 15%;
+  text-shadow: -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+#againbutton {
+  border-radius: 10px;
+  background-color: #faf9f0;
+  color: rgb(209, 147, 180);
+  border-color: rgb(209, 147, 180);
+  animation: moveDownUp 2s infinite, scaleAnimation 2s infinite;
+  position: absolute;
+  justify-content: center;
+  z-index: 5;
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 40px;
+  top: 85%;
+  left: 46%;
+  text-shadow: -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+#againbutton:hover {
+  background-color: rgb(209, 147, 180);
+  /* 设置悬停时按钮的背景颜色 */
+  color: #faf9f0;
+}
+
+
+#pizza1 {
+  position: absolute;
+
+  left: 32%;
+  width: 200px;
+  top: 37%;
+  animation: moveUpDown 2s infinite;
+  z-index: 1;
+}
+
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+#cake1 {
+  position: absolute;
+  top: 18%;
+  width: 219px;
+  left: 36%;
+  animation: moveUpDown 2s infinite;
+}
+
+#cake2 {
+  position: absolute;
+  top: 18%;
+  width: 200px;
+  left: 56%;
+  animation: moveUpDown 2s infinite;
+}
+
+#purin1 {
+  position: absolute;
+  top: 43%;
+  width: 200px;
+  left: 69%;
+  animation: moveUpDown 2s infinite;
+}
+
+#tittle-container {
+  display: block;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  top: 25%;
+  z-index: 1;
+  width: 280px;
+  height: 150px;
+  top: 20%;
+}
+
+
+#playhint {
+  width: 360px;
+  height: 500px;
+  justify-content: center;
+  align-items: center;
+  margin-left: 60%;
+  left: 90%;
+  display: flex;
+  flex-direction: column;
+  top: 20%;
+  margin-top: -13%;
+}
+
+#play {
+  width: 970px;
+  height: 730px;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-74.5%, -55%);
+}
